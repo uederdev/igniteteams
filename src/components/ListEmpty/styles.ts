@@ -1,5 +1,5 @@
 import themes from "src/themes";
-import styled from "styled-components/native";
+import styled, { css } from "styled-components/native";
 
 export const Container = styled.View`
   align-items: center;
@@ -8,8 +8,10 @@ export const Container = styled.View`
 `;
 
 export const Mensagem = styled.Text`
-  color: ${(theme) => themes.COLORS.GRAY_200};
-  font-size: ${(theme) => themes.FONT_SIZE.MD}px;
-  font-weight: ${(theme) => themes.FONT_FAMILY.REGULAR};
+  ${({ theme }) => css`
+    color: ${themes.COLORS.GRAY_200};
+    font-size: ${themes.FONT_SIZE.MD}px;
+    font-weight: ${themes.FONT_FAMILY.REGULAR};
+  `}
   text-align: center;
 `;

@@ -34,7 +34,7 @@ export default function Groups() {
           <ListEmpty value="Nenhuma turma cadastrada. Que tal cadastrar alguma?" />
         }
       />
-      <Button caption="Criar Turma" cor="" />
+      <Button caption="Criar nova turma" type="PRIMARY" />
     </Container>
   );
 }

@@ -1,4 +1,4 @@
-import styled from "styled-components/native";
+import styled, { css } from "styled-components/native";
 import { TouchableOpacity } from "react-native";
 import themes from "src/themes";
 import { UsersThree } from "phosphor-react-native";
@@ -15,9 +15,11 @@ export const Container = styled(TouchableOpacity)`
 `;
 
 export const NomeTurma = styled.Text`
-  font-size: ${({ theme }) => themes.FONT_SIZE.MD}px;
-  color: ${({ theme }) => themes.COLORS.GRAY_200};
-  font-family: ${({ theme }) => themes.FONT_FAMILY.REGULAR};
+  ${({ theme }) => css`
+    font-size: ${themes.FONT_SIZE.MD}px;
+    color: ${themes.COLORS.GRAY_200};
+    font-family: ${themes.FONT_FAMILY.REGULAR};
+  `};
 `;
 
 export const ImagemTurma = styled(UsersThree).attrs(({ theme }) => ({

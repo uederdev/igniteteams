@@ -1,15 +1,15 @@
 import { TouchableOpacityProps } from "react-native";
-import { Botao, BotaoTexto } from "./styles";
+import { BotaoTexto, ButtonTypeProps, Container } from "./styles";
 
 type Props = TouchableOpacityProps & {
   caption: string;
-  cor: string;
+  type?: ButtonTypeProps;
 };
 
-export function Button({ caption, cor, ...rest }: Props) {
+export function Button({ caption, type = "PRIMARY", ...rest }: Props) {
   return (
-    <Botao>
+    <Container {...rest} type={type}>
       <BotaoTexto>{caption}</BotaoTexto>
-    </Botao>
+    </Container>
   );
 }

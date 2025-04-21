@@ -1,5 +1,5 @@
 import themes from "src/themes";
-import styled from "styled-components/native";
+import styled, { css } from "styled-components/native";
 
 export const Container = styled.View`
   align-items: center;
@@ -15,8 +15,10 @@ export const Titulo = styled.Text`
 `;
 
 export const SubTitulo = styled.Text`
-  font-family: ${({ theme }) => themes.FONT_FAMILY.REGULAR};
-  font-size: ${({ theme }) => themes.FONT_SIZE.MD}px;
-  color: ${({ theme }) => themes.COLORS.GRAY_300};
+  ${({ theme }) => css`
+    font-family: ${themes.FONT_FAMILY.REGULAR};
+    font-size: ${themes.FONT_SIZE.MD}px;
+    color: ${themes.COLORS.GRAY_300};
+  `};
   text-align: center;
 `;
